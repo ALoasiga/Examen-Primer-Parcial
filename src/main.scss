@@ -218,17 +218,16 @@ body{
     }
 }
 
-.mainimage{
-    width: 100%;
-    filter:hue-rotate(50%);
+.ClientInfo{
+    background-color: $colorFondo4;
 
+    .mainimage{
+        width: 100%;
+        filter:grayscale(100%);
+    }
     :hover{
         filter:none;
     }
-}
-
-.ClientInfo{
-    background-color: $colorFondo4;
 }
 
 .SixthPage{
