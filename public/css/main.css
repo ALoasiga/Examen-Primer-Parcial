@@ -182,7 +182,7 @@ body {
 }
 
 .imgGallery {
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .imgGallery .imgs {
@@ -193,10 +193,8 @@ body {
 }
 
 .imgGallery .imgs .Galería {
-  height: 210px;
-  margin-bottom: 1%;
-  margin-right: 0.5%;
-  margin-left: 0.5%;
+  height: 200px;
+  margin: 1rem 1rem 1rem 0rem;
   border-radius: 15%;
   filter: sepia(50%);
 }
@@ -217,7 +215,6 @@ footer .Inputs {
   justify-content: center;
   flex-wrap: nowrap;
   margin: 0rem 8rem 0rem 8rem;
-  padding: 1rem;
 }
 
 footer .Inputs .comment {
@@ -229,7 +226,7 @@ footer .Inputs .comment {
 }
 
 footer .Inputs .comment #opinion {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 footer input {
