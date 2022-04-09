@@ -169,6 +169,15 @@ body {
   color: darkorchid;
 }
 
+.mainimage {
+  width: 100%;
+  filter: hue-rotate(50%);
+}
+
+.mainimage :hover {
+  filter: none;
+}
+
 .ClientInfo {
   background-color: #191b1b;
 }

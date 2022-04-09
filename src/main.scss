@@ -218,6 +218,15 @@ body{
     }
 }
 
+.mainimage{
+    width: 100%;
+    filter:hue-rotate(50%);
+
+    :hover{
+        filter:none;
+    }
+}
+
 .ClientInfo{
     background-color: $colorFondo4;
 }
