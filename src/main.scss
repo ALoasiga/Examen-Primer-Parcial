@@ -1,0 +1,303 @@
+//Declaracion de Variables//
+$colorFondo: whitesmoke;
+$colorFondo2: rgb(255, 238, 0);
+$colorFondo3: rgb(146, 204, 10);
+$colorFondo4: rgb(25, 27, 27);
+$color1: hotpink;
+$color2: rgb(29, 214, 199);
+$color3: white;
+$fontSizeBase: 20px;
+$box-shadow: 0px 1px 15px 1px $color1;
+$font-family: 'Patrick Hand', cursive;
+$font-familySec:'Teko', sans-serif;
+$font-familyTerc: 'Crete Round', serif;
+
+
+//Referencia para Material Google Fonts//
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Patrick+Hand&family=Teko:wght@700&display=swap');
+
+
+//Declaracion de mixin//
+@mixin setFlex ($flexDir, $alig){
+    display: flex;
+    flex-direction: $flexDir; //row;
+    flex-wrap: wrap;
+    justify-content: $alig; //space-around;
+}
+
+@mixin googleicons {
+    color: $color3;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+@mixin Title {
+    font-size: 50px;
+    color: $color1;
+    padding: 2rem;
+    font-family: $font-familySec;
+}
+
+@mixin SubTitles {
+    padding: 15px;
+    font-family: $font-familyTerc;
+    font-size: 25px;
+    color: $colorFondo3;
+    @include setFlex(row,space-around)
+}
+
+@mixin galeria {
+    height: 210px;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    border-radius: 15%;
+    filter:sepia(50%)
+}
+
+@mixin button {
+    background-color: $colorFondo;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    color: $color1;
+}
+//
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    font-size: $fontSizeBase;
+
+    a{
+        font-family: $font-familySec;
+        font-size: 25px;    
+    }
+
+    p{
+       font-family: $font-family;
+       padding: 10px; 
+    }
+
+    h2{
+        @include SubTitles;
+    }
+
+    span{
+        padding: 10px;
+    }
+}
+
+body{
+    background-color: $colorFondo;
+}
+
+//grid
+
+.container{
+    display: grid;
+    grid-gap: 0.5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "One    SixthPage"
+                            "One    imgGallery";    
+
+    .One{
+        grid-row-start: One;
+        grid-row-end: One;
+    }
+
+    .SixthPage{
+        grid-row-start: SixthPage;
+        grid-row-end: SixthPage;
+    }
+
+    .imgGallery{
+        grid-row-start: imgGallery;
+        grid-row-end: imgGallery;
+    }
+
+}
+
+//
+
+.One{
+    margin-inline: 5%;
+
+    .contactInfo{
+        @include setFlex(column,center);
+        margin: 1rem 8rem 1rem 8rem;
+        padding: 20px;
+        border-radius: 40px;
+        background-color: $color1;
+
+        :hover{
+            color: $colorFondo2;
+        }
+    }
+
+    .icons{
+        @include googleicons;
+
+    }
+}
+
+.FirstPage{
+    @include setFlex(row,space-around)
+}
+
+.mainTittle{
+    @include Title
+}
+
+.btnContainer{
+    text-align: center;
+
+    .btnGallery{
+        width: 135px;
+        border-style: none;
+        background-color: $color2;
+        padding: 10px;
+        border-radius: 50px;
+        margin: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: .2s ease all;
+
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $colorFondo2;
+            position: absolute;
+            z-index: 1;
+            top: -58px;
+            left: 0;
+            transition: .2s ease-in-out all;
+        }
+
+        &:hover::after{
+            top: 0;
+        }
+
+        a{
+            color: $color2;
+            position: relative;
+            z-index: 2;
+            transition: .4s ease all;
+
+        }
+    }
+}
+
+.aboutUs{
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+.SocialMedia{
+    padding: 2rem 3rem;
+
+    :hover{
+        color: $color2;
+    }
+
+    ul{
+        @include setFlex(row, center);
+    }
+
+    li{
+        padding: 1rem;
+    }
+
+    i{
+        font-size: 50px;
+        font-weight: 500;
+        color: darkorchid;
+    }
+}
+
+.ClientInfo{
+    background-color: $colorFondo4;
+}
+
+.SixthPage{
+    margin: 0rem 2.5rem;
+
+    p{
+        color:$color1;
+    }
+}
+
+.imgGallery{
+    padding: 2rem;
+
+    .imgs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .Galería{
+            @include galeria();
+
+            &:hover{
+                box-shadow: $box-shadow;
+                filter: none;
+            }
+        }
+    }
+}
+
+footer{
+
+    margin: 60px;
+
+    .Inputs{
+        @include setFlex(column,center);
+        flex-wrap: nowrap;
+        margin: 0rem 8rem 0rem 8rem;
+        padding: 1rem;
+
+        .comment{
+            @include setFlex(column,center);
+            flex-wrap: nowrap;
+
+            #opinion{
+                padding: 3rem;
+            }
+        }
+    }
+
+    input{
+        padding: 5px;
+        margin: 10px;
+        border-color: $colorFondo2;
+    }
+
+    .btnSecond{
+        @include setFlex(row,center);
+
+        #Abtn{
+            @include button;
+            font-family: $font-familySec;
+
+            &:hover{
+                background-color: $color2;
+            }
+        }
+
+        #Cbtn{
+            @include button;
+            font-family: $font-familySec;
+
+            &:hover{
+                background-color: $color2;
+            }
+            
+        }
+    } 
+}

@@ -1,0 +1,273 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Patrick+Hand&family=Teko:wght@700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 20px;
+}
+
+:root a {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+}
+
+:root p {
+  font-family: "Patrick Hand", cursive;
+  padding: 10px;
+}
+
+:root h2 {
+  padding: 15px;
+  font-family: "Crete Round", serif;
+  font-size: 25px;
+  color: #92cc0a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+:root span {
+  padding: 10px;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.container {
+  display: grid;
+  grid-gap: 0.5%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "One    SixthPage" "One    imgGallery";
+}
+
+.container .One {
+  grid-row-start: One;
+  grid-row-end: One;
+}
+
+.container .SixthPage {
+  grid-row-start: SixthPage;
+  grid-row-end: SixthPage;
+}
+
+.container .imgGallery {
+  grid-row-start: imgGallery;
+  grid-row-end: imgGallery;
+}
+
+.One {
+  margin-inline: 5%;
+}
+
+.One .contactInfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 8rem 1rem 8rem;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: hotpink;
+}
+
+.One .contactInfo :hover {
+  color: #ffee00;
+}
+
+.One .icons {
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.FirstPage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mainTittle {
+  font-size: 50px;
+  color: hotpink;
+  padding: 2rem;
+  font-family: "Teko", sans-serif;
+}
+
+.btnContainer {
+  text-align: center;
+}
+
+.btnContainer .btnGallery {
+  width: 135px;
+  border-style: none;
+  background-color: #1dd6c7;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: .2s ease all;
+}
+
+.btnContainer .btnGallery::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffee00;
+  position: absolute;
+  z-index: 1;
+  top: -58px;
+  left: 0;
+  transition: .2s ease-in-out all;
+}
+
+.btnContainer .btnGallery:hover::after {
+  top: 0;
+}
+
+.btnContainer .btnGallery a {
+  color: #1dd6c7;
+  position: relative;
+  z-index: 2;
+  transition: .4s ease all;
+}
+
+.aboutUs {
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.SocialMedia {
+  padding: 2rem 3rem;
+}
+
+.SocialMedia :hover {
+  color: #1dd6c7;
+}
+
+.SocialMedia ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.SocialMedia li {
+  padding: 1rem;
+}
+
+.SocialMedia i {
+  font-size: 50px;
+  font-weight: 500;
+  color: darkorchid;
+}
+
+.ClientInfo {
+  background-color: #191b1b;
+}
+
+.SixthPage {
+  margin: 0rem 2.5rem;
+}
+
+.SixthPage p {
+  color: hotpink;
+}
+
+.imgGallery {
+  padding: 2rem;
+}
+
+.imgGallery .imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imgGallery .imgs .Galería {
+  height: 210px;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  border-radius: 15%;
+  filter: sepia(50%);
+}
+
+.imgGallery .imgs .Galería:hover {
+  box-shadow: 0px 1px 15px 1px hotpink;
+  filter: none;
+}
+
+footer {
+  margin: 60px;
+}
+
+footer .Inputs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0rem 8rem 0rem 8rem;
+  padding: 1rem;
+}
+
+footer .Inputs .comment {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+footer .Inputs .comment #opinion {
+  padding: 3rem;
+}
+
+footer input {
+  padding: 5px;
+  margin: 10px;
+  border-color: #ffee00;
+}
+
+footer .btnSecond {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer .btnSecond #Abtn {
+  background-color: whitesmoke;
+  padding: 8px 12px;
+  border-radius: 15px;
+  margin: 10px;
+  color: hotpink;
+  font-family: "Teko", sans-serif;
+}
+
+footer .btnSecond #Abtn:hover {
+  background-color: #1dd6c7;
+}
+
+footer .btnSecond #Cbtn {
+  background-color: whitesmoke;
+  padding: 8px 12px;
+  border-radius: 15px;
+  margin: 10px;
+  color: hotpink;
+  font-family: "Teko", sans-serif;
+}
+
+footer .btnSecond #Cbtn:hover {
+  background-color: #1dd6c7;
+}
+/*# sourceMappingURL=main.css.map */
