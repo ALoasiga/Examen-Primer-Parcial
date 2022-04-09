@@ -284,19 +284,51 @@ footer{
 
         #Abtn{
             @include button;
+            position: relative;
+            overflow: hidden;
+            transition: .2s ease all;
             font-family: $font-familySec;
 
-            &:hover{
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                color:$colorFondo;
                 background-color: $color2;
+                position: absolute;
+                z-index: 1;
+                top: -58px;
+                left: 0;
+                transition: .2s ease-in-out all;
+            }
+    
+            &:hover::after{
+                top: 0;
             }
         }
 
         #Cbtn{
             @include button;
+            position: relative;
+            overflow: hidden;
+            transition: .2s ease all;
             font-family: $font-familySec;
 
-            &:hover{
-                background-color: $color2;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                color:$colorFondo;
+                background-color: $color1;
+                position: absolute;
+                z-index: 1;
+                top: 58px;
+                left: 0;
+                transition: .2s ease-in-out all;
+            }
+    
+            &:hover::after{
+                top: 0;
             }
             
         }
